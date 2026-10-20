@@ -1,0 +1,17 @@
+services:
+  rackflow:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: rackflow:latest
+    container_name: rackflow
+    restart: unless-stopped
+    ports:
+      - "${RACKFLOW_PORT:-8082}:80"
+    healthcheck:
+      # 127.0.0.1, never "localhost" (IPv6 pitfall inside Alpine images)
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s

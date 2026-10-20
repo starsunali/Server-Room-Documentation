@@ -1,0 +1,8 @@
+# build context hygiene
+node_modules/
+.git/
+.gitignore
+README.md
+docs/
+docker/.env
+*.log

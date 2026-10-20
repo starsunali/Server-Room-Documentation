@@ -1,0 +1,4 @@
+# runtime database (created by server/serve.ps1)
+data/
+*.tmp
+*.log

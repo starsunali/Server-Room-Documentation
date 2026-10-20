@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RackFlow — Users</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var t=localStorage.getItem('rackflow.theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body class="page-app" data-page="users">
+<div id="topbar"></div>
+
+<main class="wrap">
+  <header class="page-head">
+    <div>
+      <h1>Users</h1>
+      <p class="page-sub">Accounts, roles and access status. Passwords are never shown here.</p>
+    </div>
+    <div class="head-actions">
+      <button class="btn primary" data-act="add-user"><span class="btn-plus">+</span> Add user</button>
+    </div>
+  </header>
+
+  <div id="bannerRoot"></div>
+  <section class="table-card">
+    <table class="table" id="userTable">
+      <thead>
+        <tr><th>NAME</th><th>USERNAME</th><th>ROLE</th><th>STATUS</th><th>EMAIL</th><th class="ta-r">ACTIONS</th></tr>
+      </thead>
+      <tbody id="userRows"></tbody>
+    </table>
+    <p id="emptyState" class="empty" hidden>No users yet.</p>
+  </section>
+</main>
+
+<div id="modalRoot"></div>
+<div id="zoomRoot"></div>
+<div id="toastRoot" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+<script src="js/app.js"></script>
+<script src="js/users.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RackFlow — Racks</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<script>(function(){try{var t=localStorage.getItem('rackflow.theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body class="page-app" data-page="admin">
+<div id="topbar"></div>
+
+<main class="wrap">
+  <header class="page-head">
+    <div>
+      <h1>Racks</h1>
+      <p class="page-sub">Racks, devices and connections — edit everything in place.</p>
+    </div>
+    <div class="head-actions">
+      <button class="btn primary" data-act="add-rack"><span class="btn-plus">+</span> Add a rack</button>
+    </div>
+  </header>
+
+  <div id="bannerRoot"></div>
+  <section id="rackGrid" class="rack-grid" aria-label="Racks"></section>
+  <p id="emptyState" class="empty" hidden>No racks yet — use <strong>Add a rack</strong> to create the first one.</p>
+</main>
+
+<div id="modalRoot"></div>
+<div id="zoomRoot"></div>
+<div id="toastRoot" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+<script src="js/app.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
